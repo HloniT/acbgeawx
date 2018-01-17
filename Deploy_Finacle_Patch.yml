@@ -12,4 +12,4 @@
     tasks:
     -
            name: 'Deploying Patches on Finacle'
-           command: /usr/bin/ksh /manageFinacile.com admin patch D {{finacle_patch_list}} {{apdmadm_password}}
+           command: /usr/bin/ksh /home/lehlohonolo/manageFinacle.com admin patch D {{finacle_patch_list}} {{apdmadm_password}}
