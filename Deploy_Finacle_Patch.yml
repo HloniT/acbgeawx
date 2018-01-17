@@ -12,5 +12,5 @@
     tasks:
     -
            name: 'Deploying Patches on Finacle'
-           raw: cd admin/
+           chdir: ./admin/
            raw: /usr/bin/ksh ./manageFinacle.com patch D {{finacle_patch_list}} {{apdmadm_password}}
