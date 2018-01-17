@@ -1,0 +1,15 @@
+---
+# ##################################
+# Playbook file: Deploy_Finacle_Patch.yml
+# Finacle Version:  10.2.09
+# Author: Ezekiel Tumahole
+# Date:   17-JAN-2017
+-
+    name: 'Finacle_Patch_Deployment'
+    hosts: all
+    gather_facts: False
+ 
+    tasks:
+    -
+           name: 'Deploying Patch on Finacle'
+           command: /usr/bin/ksh /manageFinacile.com admin patch D {{patch_list}} {{apdmadm_password}}
