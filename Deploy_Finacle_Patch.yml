@@ -11,5 +11,5 @@
  
     tasks:
     -
-           name: 'Deploying Patch on Finacle'
-           command: /usr/bin/ksh /manageFinacile.com admin patch D {{patch_list}} {{apdmadm_password}}
+           name: 'Deploying Patches on Finacle'
+           command: /usr/bin/ksh /manageFinacile.com admin patch D {{finacle_patch_list}} {{apdmadm_password}}
