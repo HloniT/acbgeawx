@@ -11,5 +11,12 @@
  
     tasks:
     -
+           name: 'Stop Finacle Services'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com stop all
+    -
            name: 'Deploying Patches on Finacle'
-           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com patch D {{finacle_patch_list}} {{apdmadm_password}}
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/APDM/CONFIG/invokeAPDM.sh patch -D {{finacle_patch_list}} N {{apdmadm_password}}
+    -
+           name: 'Start Finacle Services'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com start all
+ 
