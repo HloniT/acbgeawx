@@ -1,0 +1,31 @@
+---
+# ##################################
+# Playbook file: Deploy_Finacle_Patch_GH-SIT.yml
+# Finacle Version:  10.2.09
+# Author: Ezekiel Tumahole
+# Date:   17-JAN-2017
+-
+    name: 'Finacle_Patch_Deployment'
+    hosts: all
+    gather_facts: False
+ 
+    tasks:
+    -
+           name: 'Stop Finacle Services on Node1'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com stop all
+    -
+           name: 'Deploying Patches on Node 1'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/APDM/CONFIG/invokeAPDM.sh patch -D {{finacle_patch_list}} N {{apdmadm_password}} GROUP1
+    -
+           name: 'Start Finacle Services on Node1'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com start all
+   -
+           name: 'Stop Finacle Services on Node2'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com stop all
+    -
+           name: 'Deploying Patches on Node 2'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/APDM/CONFIG/invokeAPDM.sh patch -D {{finacle_patch_list}} N {{apdmadm_password}} GROUP2
+    -
+           name: 'Start Finacle Services on Node2'
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com start all
+ 
