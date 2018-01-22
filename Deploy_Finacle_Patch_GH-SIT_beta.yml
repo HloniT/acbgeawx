@@ -14,6 +14,9 @@
            name: 'Stop Finacle Services on Node1'
            raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com stop all
     -
+           name: 'Change to APDM directory'
+           raw: cd /finacle/ZA/SIT/cpp/ZASIT/APDM/CONFIG/
+    -
            name: 'Deploying Patches on Node 1'
            raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/APDM/CONFIG/invokeAPDM.sh -D {{finacle_patch_list}} N {{apdmadm_password}} GROUP1
     -
