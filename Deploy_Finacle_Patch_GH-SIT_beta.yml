@@ -19,7 +19,7 @@
     -
            name: 'Start Finacle Services on Node1'
            raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com start all
-   -
+    -
            name: 'Stop Finacle Services on Node2'
            raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacle.com stop all
     -
