@@ -11,5 +11,5 @@
  
     tasks:
     -     
-           name: 'Deploying Patches on Finacle'
-           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacleGE.com patch D {{finacle_patch_list}}
+    name: 'Deploying Patches on Finacle'
+    raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacleGE.com patch D {{finacle_patch_list}}
