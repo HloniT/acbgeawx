@@ -1,14 +1,15 @@
 ---
 # ##################################
-# Playbook file: Deploy_Finacle_Patch_GH-SIT.yml
+# Playbook file: Deploy_Finacle_Patch_GC.yml
 # Finacle Version:  10.2.09
 # Author: Ezekiel Tumahole
 # Date:   17-JAN-2017
-tasks:
 -
     name: 'Finacle_Patch_Deployment'
     hosts: all
     gather_facts: False
-    
-    name: 'Deploying Patches on Finacle'
-    raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacleGE.com patch D {{finacle_patch_list}}
+ 
+    tasks:
+    -
+           name: 'Deploying Patches on Finacle'
+           raw: /usr/bin/ksh /usr/bin/ksh /finacle/ZA/GV2/cpp/ZAGV2/admin/manageFinacle.com patch -D {{finacle_patch_list}} {{apdmadm_password}}
