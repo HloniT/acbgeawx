@@ -12,4 +12,4 @@
     tasks:
     -
            name: 'Deploying Patches on Finacle'
-           raw: /usr/bin/ksh /usr/bin/ksh /finacle/ZA/GV2/cpp/ZAGV2/admin/manageFinacle.com patch -D {{finacle_patch_list}} {{apdmadm_password}}
+           raw: /usr/bin/ksh /usr/bin/ksh /finacle/ZA/GV2/cpp/ZAGV2/admin/manageFinacle.com patch -D PR26_CORE_123_cust
