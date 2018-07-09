@@ -9,7 +9,6 @@ tasks:
     name: 'Finacle_Patch_Deployment'
     hosts: all
     gather_facts: False
- 
-    -     
+    
     name: 'Deploying Patches on Finacle'
     raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacleGE.com patch D {{finacle_patch_list}}
