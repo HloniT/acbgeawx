@@ -12,4 +12,4 @@
     tasks:
     -
            name: 'Deploying Patches on Finacle'
-           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacleGE.com patch D {{finacle_patch_list}} N {{apdmadm_password}}
+           raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacleGE.com patch D {{finacle_patch_list}}
