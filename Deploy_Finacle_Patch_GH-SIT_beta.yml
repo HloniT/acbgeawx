@@ -4,12 +4,12 @@
 # Finacle Version:  10.2.09
 # Author: Ezekiel Tumahole
 # Date:   17-JAN-2017
+tasks:
 -
     name: 'Finacle_Patch_Deployment'
     hosts: all
     gather_facts: False
  
-    tasks:
     -     
     name: 'Deploying Patches on Finacle'
     raw: /usr/bin/ksh /finacle/ZA/SIT/cpp/ZASIT/admin/manageFinacleGE.com patch D {{finacle_patch_list}}
